@@ -23,8 +23,10 @@ class Command( GisCommand ):
         except AttributeError:
             raise CommandError("Mapping '%s_mapping' not found in %s.models" % ( app_name, model_name ))
 
-        options = dict( encoding=options['encoding'], source_srs=options['srid'] )
-        load(model, filepath, mapping, options)
+        load_options = dict( encoding=options['encoding'], source_srs=options['srid'] )
+        if options.get('using'):
+            load_options['using'] = options['using']
+        load(model, filepath, mapping, load_options)
 
 
 def load( model, filepath, mapping, options ):
