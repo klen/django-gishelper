@@ -22,7 +22,7 @@ class GisCommand( BaseCommand ):
         if not os.path.exists( filepath ):
             raise CommandError( "File '%s' not exists." % filepath)
 
-        self.gishandle( self, model_name, filepath, *args, **options )
+        self.gishandle( model_name, filepath, *args, **options )
 
     def gishandle( self, model_name, filepath, *args, **options ):
         raise NotImplementedError()
