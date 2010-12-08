@@ -24,8 +24,6 @@ META_DATA = dict(
     url = "http://github.com/klen/django-gishelper.git",
 
     packages = find_packages(),
-
-    install_requires = [ 'django' ],
 )
 
 if __name__ == "__main__":
