@@ -1,5 +1,5 @@
 build
 dist
-sitegen.egg-info
+*.egg-info
 .ropeproject
 *.pyc
